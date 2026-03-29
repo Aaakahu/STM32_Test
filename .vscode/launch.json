@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug (OpenOCD)",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/STM32_Test.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "device": "STM32F103C8",
+            "configFiles": [
+                "C:/ProgramData/chocolatey/lib/openocd/tools/install/share/openocd/scripts/interface/stlink-v2.cfg",
+                "C:/ProgramData/chocolatey/lib/openocd/tools/install/share/openocd/scripts/target/stm32f1x.cfg"
+            ],
+            "gdbPath": "arm-none-eabi-gdb",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "Build",
+            "overrideLaunchCommands": [
+                "monitor reset halt",
+                "load"
+            ]
+        }
+    ]
+}

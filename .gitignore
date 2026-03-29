@@ -1,0 +1,21 @@
+# Build outputs
+build/
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.d
+
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+*.mxproject
+
+# Debug
+*.log
