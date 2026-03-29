@@ -202,8 +202,6 @@ int main(void)
         if (now - last_distance_update >= 200) {
             last_distance_update = now;
             distance_cm = HCSR04_GetDistance();
-            // 更新全局变量供 ESP8266 上报
-            extern uint16_t distance_cm;
             // 距离小于10cm触发报警，小于3cm强烈报警
             distance_alarm = (distance_cm <= 10 && distance_cm != 999);
         }

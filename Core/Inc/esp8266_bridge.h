@@ -14,8 +14,8 @@
 
 // ==================== 配置 ====================
 
-// 数据上报间隔 (ms)
-#define ESP_REPORT_INTERVAL 5000
+// 数据上报间隔 (ms) - 改为 1 秒以提高实时性
+#define ESP_REPORT_INTERVAL 1000
 
 // 接收缓冲区大小
 #define ESP_RX_BUFFER_SIZE 128
@@ -39,7 +39,7 @@ typedef struct {
 extern float DHT11_Temp, DHT11_Humi;           // DHT11 数据
 extern uint8_t smoke_level;                     // MQ2 等级
 extern uint16_t smoke_ppm;                      // MQ2 PPM
-extern uint16_t distance_cm;                    // 超声波距离
+// extern uint16_t distance_cm;  // 注释掉，已在 main.c 定义
 extern uint8_t door_open_flag;                  // 门状态标志
 
 // 本模块全局变量
